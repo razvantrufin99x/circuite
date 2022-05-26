@@ -89,6 +89,7 @@
             // 
             // intrerupator8
             // 
+            this.intrerupator8.Enabled = false;
             this.intrerupator8.Location = new System.Drawing.Point(122, 331);
             this.intrerupator8.Margin = new System.Windows.Forms.Padding(2);
             this.intrerupator8.Name = "intrerupator8";
@@ -97,6 +98,7 @@
             // 
             // intrerupator5
             // 
+            this.intrerupator5.Enabled = false;
             this.intrerupator5.Location = new System.Drawing.Point(122, 200);
             this.intrerupator5.Margin = new System.Windows.Forms.Padding(2);
             this.intrerupator5.Name = "intrerupator5";
@@ -113,6 +115,7 @@
             // 
             // intrerupator3
             // 
+            this.intrerupator3.Enabled = false;
             this.intrerupator3.Location = new System.Drawing.Point(122, 61);
             this.intrerupator3.Margin = new System.Windows.Forms.Padding(2);
             this.intrerupator3.Name = "intrerupator3";
