@@ -36,6 +36,40 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.intrerupator28 = new circuite.intrerupator();
+            this.intrerupator29 = new circuite.intrerupator();
+            this.intrerupator30 = new circuite.intrerupator();
+            this.intrerupator27 = new circuite.intrerupator();
+            this.intrerupator26 = new circuite.intrerupator();
+            this.intrerupator25 = new circuite.intrerupator();
+            this.intrerupator24 = new circuite.intrerupator();
+            this.intrerupator23 = new circuite.intrerupator();
+            this.intrerupator22 = new circuite.intrerupator();
+            this.intrerupator21 = new circuite.intrerupator();
+            this.intrerupator20 = new circuite.intrerupator();
             this.intrerupator19 = new circuite.intrerupator();
             this.intrerupator18 = new circuite.intrerupator();
             this.intrerupator17 = new circuite.intrerupator();
@@ -55,21 +89,11 @@
             this.intrerupator3 = new circuite.intrerupator();
             this.intrerupator2 = new circuite.intrerupator();
             this.intrerupator1 = new circuite.intrerupator();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.intrerupator31 = new circuite.intrerupator();
+            this.intrerupator32 = new circuite.intrerupator();
+            this.intrerupator33 = new circuite.intrerupator();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -107,7 +131,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(350, 73);
+            this.button4.Location = new System.Drawing.Point(380, 155);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 137);
@@ -160,169 +184,10 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // intrerupator19
-            // 
-            this.intrerupator19.Enabled = false;
-            this.intrerupator19.Location = new System.Drawing.Point(1117, 156);
-            this.intrerupator19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator19.Name = "intrerupator19";
-            this.intrerupator19.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator19.TabIndex = 27;
-            // 
-            // intrerupator18
-            // 
-            this.intrerupator18.Enabled = false;
-            this.intrerupator18.Location = new System.Drawing.Point(961, 61);
-            this.intrerupator18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator18.Name = "intrerupator18";
-            this.intrerupator18.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator18.TabIndex = 25;
-            // 
-            // intrerupator17
-            // 
-            this.intrerupator17.Enabled = false;
-            this.intrerupator17.Location = new System.Drawing.Point(811, 215);
-            this.intrerupator17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator17.Name = "intrerupator17";
-            this.intrerupator17.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator17.TabIndex = 23;
-            // 
-            // intrerupator16
-            // 
-            this.intrerupator16.Enabled = false;
-            this.intrerupator16.Location = new System.Drawing.Point(811, 109);
-            this.intrerupator16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator16.Name = "intrerupator16";
-            this.intrerupator16.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator16.TabIndex = 21;
-            // 
-            // intrerupator15
-            // 
-            this.intrerupator15.Location = new System.Drawing.Point(653, 240);
-            this.intrerupator15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator15.Name = "intrerupator15";
-            this.intrerupator15.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator15.TabIndex = 19;
-            // 
-            // intrerupator14
-            // 
-            this.intrerupator14.Location = new System.Drawing.Point(653, 156);
-            this.intrerupator14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator14.Name = "intrerupator14";
-            this.intrerupator14.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator14.TabIndex = 18;
-            // 
-            // intrerupator13
-            // 
-            this.intrerupator13.Location = new System.Drawing.Point(811, 11);
-            this.intrerupator13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator13.Name = "intrerupator13";
-            this.intrerupator13.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator13.TabIndex = 17;
-            // 
-            // intrerupator12
-            // 
-            this.intrerupator12.Location = new System.Drawing.Point(275, 194);
-            this.intrerupator12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator12.Name = "intrerupator12";
-            this.intrerupator12.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator12.TabIndex = 15;
-            // 
-            // intrerupator9
-            // 
-            this.intrerupator9.Location = new System.Drawing.Point(418, 109);
-            this.intrerupator9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator9.Name = "intrerupator9";
-            this.intrerupator9.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator9.TabIndex = 13;
-            // 
-            // intrerupator10
-            // 
-            this.intrerupator10.Location = new System.Drawing.Point(275, 97);
-            this.intrerupator10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator10.Name = "intrerupator10";
-            this.intrerupator10.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator10.TabIndex = 12;
-            // 
-            // intrerupator11
-            // 
-            this.intrerupator11.Location = new System.Drawing.Point(275, 11);
-            this.intrerupator11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator11.Name = "intrerupator11";
-            this.intrerupator11.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator11.TabIndex = 11;
-            // 
-            // intrerupator6
-            // 
-            this.intrerupator6.Location = new System.Drawing.Point(19, 262);
-            this.intrerupator6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator6.Name = "intrerupator6";
-            this.intrerupator6.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator6.TabIndex = 9;
-            // 
-            // intrerupator7
-            // 
-            this.intrerupator7.Location = new System.Drawing.Point(17, 346);
-            this.intrerupator7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator7.Name = "intrerupator7";
-            this.intrerupator7.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator7.TabIndex = 8;
-            // 
-            // intrerupator8
-            // 
-            this.intrerupator8.Enabled = false;
-            this.intrerupator8.Location = new System.Drawing.Point(163, 306);
-            this.intrerupator8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator8.Name = "intrerupator8";
-            this.intrerupator8.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator8.TabIndex = 7;
-            // 
-            // intrerupator5
-            // 
-            this.intrerupator5.Enabled = false;
-            this.intrerupator5.Location = new System.Drawing.Point(163, 180);
-            this.intrerupator5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator5.Name = "intrerupator5";
-            this.intrerupator5.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator5.TabIndex = 5;
-            // 
-            // intrerupator4
-            // 
-            this.intrerupator4.Location = new System.Drawing.Point(17, 180);
-            this.intrerupator4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator4.Name = "intrerupator4";
-            this.intrerupator4.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator4.TabIndex = 4;
-            // 
-            // intrerupator3
-            // 
-            this.intrerupator3.Enabled = false;
-            this.intrerupator3.Location = new System.Drawing.Point(158, 58);
-            this.intrerupator3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator3.Name = "intrerupator3";
-            this.intrerupator3.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator3.TabIndex = 2;
-            // 
-            // intrerupator2
-            // 
-            this.intrerupator2.Location = new System.Drawing.Point(12, 97);
-            this.intrerupator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator2.Name = "intrerupator2";
-            this.intrerupator2.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator2.TabIndex = 1;
-            // 
-            // intrerupator1
-            // 
-            this.intrerupator1.Location = new System.Drawing.Point(12, 11);
-            this.intrerupator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.intrerupator1.Name = "intrerupator1";
-            this.intrerupator1.Size = new System.Drawing.Size(91, 79);
-            this.intrerupator1.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(888, 346);
+            this.label1.Location = new System.Drawing.Point(1108, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 16);
             this.label1.TabIndex = 28;
@@ -331,7 +196,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(436, 43);
+            this.label2.Location = new System.Drawing.Point(466, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 29;
@@ -439,7 +304,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1049, 332);
+            this.label14.Location = new System.Drawing.Point(1251, 243);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 16);
             this.label14.TabIndex = 41;
@@ -447,7 +312,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1052, 361);
+            this.textBox1.Location = new System.Drawing.Point(1254, 58);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(93, 176);
@@ -455,11 +320,412 @@
             this.textBox1.Text = "S A B Z\r\n0 0 0 0 \r\n0 0 1 0\r\n0 1 0 1\r\n0 1 1 1\r\n1 0 0 0\r\n1 0 1 1\r\n1 1 0 0\r\n1 1 1 1";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(102, 439);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(76, 74);
+            this.button9.TabIndex = 45;
+            this.button9.Text = "BUFFER";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(160, 419);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 16);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "BUFFER";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(164, 540);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 16);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "NOR";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(93, 560);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(76, 74);
+            this.button10.TabIndex = 52;
+            this.button10.Text = "NOR";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(380, 429);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(76, 74);
+            this.button11.TabIndex = 55;
+            this.button11.Text = "NAND";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(466, 409);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 16);
+            this.label17.TabIndex = 57;
+            this.label17.Text = "NAND";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(653, 429);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(76, 74);
+            this.button12.TabIndex = 60;
+            this.button12.Text = "XOR";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(739, 409);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 16);
+            this.label18.TabIndex = 62;
+            this.label18.Text = "XOR";
+            // 
+            // intrerupator28
+            // 
+            this.intrerupator28.Location = new System.Drawing.Point(578, 477);
+            this.intrerupator28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator28.Name = "intrerupator28";
+            this.intrerupator28.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator28.TabIndex = 61;
+            // 
+            // intrerupator29
+            // 
+            this.intrerupator29.Location = new System.Drawing.Point(578, 375);
+            this.intrerupator29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator29.Name = "intrerupator29";
+            this.intrerupator29.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator29.TabIndex = 59;
+            // 
+            // intrerupator30
+            // 
+            this.intrerupator30.Enabled = false;
+            this.intrerupator30.Location = new System.Drawing.Point(722, 427);
+            this.intrerupator30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator30.Name = "intrerupator30";
+            this.intrerupator30.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator30.TabIndex = 58;
+            // 
+            // intrerupator27
+            // 
+            this.intrerupator27.Enabled = false;
+            this.intrerupator27.Location = new System.Drawing.Point(448, 424);
+            this.intrerupator27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator27.Name = "intrerupator27";
+            this.intrerupator27.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator27.TabIndex = 56;
+            // 
+            // intrerupator26
+            // 
+            this.intrerupator26.Location = new System.Drawing.Point(305, 477);
+            this.intrerupator26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator26.Name = "intrerupator26";
+            this.intrerupator26.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator26.TabIndex = 54;
+            // 
+            // intrerupator25
+            // 
+            this.intrerupator25.Location = new System.Drawing.Point(305, 375);
+            this.intrerupator25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator25.Name = "intrerupator25";
+            this.intrerupator25.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator25.TabIndex = 53;
+            // 
+            // intrerupator24
+            // 
+            this.intrerupator24.Enabled = false;
+            this.intrerupator24.Location = new System.Drawing.Point(167, 555);
+            this.intrerupator24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator24.Name = "intrerupator24";
+            this.intrerupator24.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator24.TabIndex = 51;
+            // 
+            // intrerupator23
+            // 
+            this.intrerupator23.Location = new System.Drawing.Point(19, 602);
+            this.intrerupator23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator23.Name = "intrerupator23";
+            this.intrerupator23.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator23.TabIndex = 48;
+            // 
+            // intrerupator22
+            // 
+            this.intrerupator22.Location = new System.Drawing.Point(19, 519);
+            this.intrerupator22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator22.Name = "intrerupator22";
+            this.intrerupator22.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator22.TabIndex = 47;
+            // 
+            // intrerupator21
+            // 
+            this.intrerupator21.Enabled = false;
+            this.intrerupator21.Location = new System.Drawing.Point(163, 439);
+            this.intrerupator21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator21.Name = "intrerupator21";
+            this.intrerupator21.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator21.TabIndex = 44;
+            // 
+            // intrerupator20
+            // 
+            this.intrerupator20.Location = new System.Drawing.Point(19, 439);
+            this.intrerupator20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator20.Name = "intrerupator20";
+            this.intrerupator20.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator20.TabIndex = 43;
+            // 
+            // intrerupator19
+            // 
+            this.intrerupator19.Enabled = false;
+            this.intrerupator19.Location = new System.Drawing.Point(1117, 156);
+            this.intrerupator19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator19.Name = "intrerupator19";
+            this.intrerupator19.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator19.TabIndex = 27;
+            // 
+            // intrerupator18
+            // 
+            this.intrerupator18.Enabled = false;
+            this.intrerupator18.Location = new System.Drawing.Point(961, 61);
+            this.intrerupator18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator18.Name = "intrerupator18";
+            this.intrerupator18.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator18.TabIndex = 25;
+            // 
+            // intrerupator17
+            // 
+            this.intrerupator17.Enabled = false;
+            this.intrerupator17.Location = new System.Drawing.Point(811, 215);
+            this.intrerupator17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator17.Name = "intrerupator17";
+            this.intrerupator17.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator17.TabIndex = 23;
+            // 
+            // intrerupator16
+            // 
+            this.intrerupator16.Enabled = false;
+            this.intrerupator16.Location = new System.Drawing.Point(811, 109);
+            this.intrerupator16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator16.Name = "intrerupator16";
+            this.intrerupator16.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator16.TabIndex = 21;
+            // 
+            // intrerupator15
+            // 
+            this.intrerupator15.Location = new System.Drawing.Point(653, 240);
+            this.intrerupator15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator15.Name = "intrerupator15";
+            this.intrerupator15.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator15.TabIndex = 19;
+            // 
+            // intrerupator14
+            // 
+            this.intrerupator14.Location = new System.Drawing.Point(653, 156);
+            this.intrerupator14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator14.Name = "intrerupator14";
+            this.intrerupator14.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator14.TabIndex = 18;
+            // 
+            // intrerupator13
+            // 
+            this.intrerupator13.Location = new System.Drawing.Point(811, 11);
+            this.intrerupator13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator13.Name = "intrerupator13";
+            this.intrerupator13.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator13.TabIndex = 17;
+            // 
+            // intrerupator12
+            // 
+            this.intrerupator12.Location = new System.Drawing.Point(305, 276);
+            this.intrerupator12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator12.Name = "intrerupator12";
+            this.intrerupator12.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator12.TabIndex = 15;
+            // 
+            // intrerupator9
+            // 
+            this.intrerupator9.Enabled = false;
+            this.intrerupator9.Location = new System.Drawing.Point(448, 191);
+            this.intrerupator9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator9.Name = "intrerupator9";
+            this.intrerupator9.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator9.TabIndex = 13;
+            // 
+            // intrerupator10
+            // 
+            this.intrerupator10.Location = new System.Drawing.Point(305, 179);
+            this.intrerupator10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator10.Name = "intrerupator10";
+            this.intrerupator10.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator10.TabIndex = 12;
+            // 
+            // intrerupator11
+            // 
+            this.intrerupator11.Location = new System.Drawing.Point(305, 93);
+            this.intrerupator11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator11.Name = "intrerupator11";
+            this.intrerupator11.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator11.TabIndex = 11;
+            // 
+            // intrerupator6
+            // 
+            this.intrerupator6.Location = new System.Drawing.Point(19, 262);
+            this.intrerupator6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator6.Name = "intrerupator6";
+            this.intrerupator6.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator6.TabIndex = 9;
+            // 
+            // intrerupator7
+            // 
+            this.intrerupator7.Location = new System.Drawing.Point(17, 346);
+            this.intrerupator7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator7.Name = "intrerupator7";
+            this.intrerupator7.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator7.TabIndex = 8;
+            // 
+            // intrerupator8
+            // 
+            this.intrerupator8.Enabled = false;
+            this.intrerupator8.Location = new System.Drawing.Point(163, 306);
+            this.intrerupator8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator8.Name = "intrerupator8";
+            this.intrerupator8.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator8.TabIndex = 7;
+            // 
+            // intrerupator5
+            // 
+            this.intrerupator5.Enabled = false;
+            this.intrerupator5.Location = new System.Drawing.Point(163, 180);
+            this.intrerupator5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator5.Name = "intrerupator5";
+            this.intrerupator5.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator5.TabIndex = 5;
+            // 
+            // intrerupator4
+            // 
+            this.intrerupator4.Location = new System.Drawing.Point(17, 180);
+            this.intrerupator4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator4.Name = "intrerupator4";
+            this.intrerupator4.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator4.TabIndex = 4;
+            // 
+            // intrerupator3
+            // 
+            this.intrerupator3.Enabled = false;
+            this.intrerupator3.Location = new System.Drawing.Point(158, 58);
+            this.intrerupator3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator3.Name = "intrerupator3";
+            this.intrerupator3.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator3.TabIndex = 2;
+            // 
+            // intrerupator2
+            // 
+            this.intrerupator2.Location = new System.Drawing.Point(12, 97);
+            this.intrerupator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator2.Name = "intrerupator2";
+            this.intrerupator2.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator2.TabIndex = 1;
+            // 
+            // intrerupator1
+            // 
+            this.intrerupator1.Location = new System.Drawing.Point(12, 11);
+            this.intrerupator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator1.Name = "intrerupator1";
+            this.intrerupator1.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator1.TabIndex = 0;
+            // 
+            // intrerupator31
+            // 
+            this.intrerupator31.Location = new System.Drawing.Point(863, 356);
+            this.intrerupator31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator31.Name = "intrerupator31";
+            this.intrerupator31.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator31.TabIndex = 63;
+            // 
+            // intrerupator32
+            // 
+            this.intrerupator32.Location = new System.Drawing.Point(864, 477);
+            this.intrerupator32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator32.Name = "intrerupator32";
+            this.intrerupator32.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator32.TabIndex = 64;
+            // 
+            // intrerupator33
+            // 
+            this.intrerupator33.Enabled = false;
+            this.intrerupator33.Location = new System.Drawing.Point(1017, 414);
+            this.intrerupator33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.intrerupator33.Name = "intrerupator33";
+            this.intrerupator33.Size = new System.Drawing.Size(91, 79);
+            this.intrerupator33.TabIndex = 65;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(949, 419);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(76, 74);
+            this.button13.TabIndex = 66;
+            this.button13.Text = "XNOR";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(1027, 389);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 16);
+            this.label19.TabIndex = 67;
+            this.label19.Text = "XNOR";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 627);
+            this.ClientSize = new System.Drawing.Size(1379, 775);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.intrerupator33);
+            this.Controls.Add(this.intrerupator32);
+            this.Controls.Add(this.intrerupator31);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.intrerupator28);
+            this.Controls.Add(this.intrerupator29);
+            this.Controls.Add(this.intrerupator30);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.intrerupator27);
+            this.Controls.Add(this.intrerupator26);
+            this.Controls.Add(this.intrerupator25);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.intrerupator24);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.intrerupator23);
+            this.Controls.Add(this.intrerupator22);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.intrerupator21);
+            this.Controls.Add(this.intrerupator20);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -555,6 +821,30 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox1;
+        private intrerupator intrerupator20;
+        private intrerupator intrerupator21;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label15;
+        private intrerupator intrerupator22;
+        private intrerupator intrerupator23;
+        private System.Windows.Forms.Label label16;
+        private intrerupator intrerupator24;
+        private System.Windows.Forms.Button button10;
+        private intrerupator intrerupator25;
+        private intrerupator intrerupator26;
+        private System.Windows.Forms.Button button11;
+        private intrerupator intrerupator27;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label18;
+        private intrerupator intrerupator28;
+        private intrerupator intrerupator29;
+        private intrerupator intrerupator30;
+        private intrerupator intrerupator31;
+        private intrerupator intrerupator32;
+        private intrerupator intrerupator33;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label19;
     }
 }
 
