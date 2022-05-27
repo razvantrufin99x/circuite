@@ -17,8 +17,11 @@ namespace circuite
             InitializeComponent();
         }
         circuitelectriccuintrerupatoare circuitulAND = new circuitelectriccuintrerupatoare();
+
         circuitelectriccuintrerupatoare circuitulOR = new circuitelectriccuintrerupatoare();
+
         circuitelectriccuintrerupatoare circuitulNOT = new circuitelectriccuintrerupatoare();
+
         circuitelectriccuintrerupatoare circuitulANDM = new circuitelectriccuintrerupatoare();
 
         circuitelectriccuintrerupatoare circuitNOTSNmx = new circuitelectriccuintrerupatoare();
