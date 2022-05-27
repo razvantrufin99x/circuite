@@ -10,7 +10,12 @@ namespace circuite
     {
         public List<intrerupator> listaIntrerupatoareIntrare = new List<intrerupator>();
         public List<intrerupator> listaIntrerupatoareIesire = new List<intrerupator>();
-
+        
+            public bool ANDMultipleLogic(ref List <intrerupator> im, intrerupator C)
+        {
+            if (im[0].value == "ON" && im[1].value == "ON" && im[2].value=="ON") { C.value = "ON"; C.startUp(); C.debugOnly(); return true; }
+            else { C.value = "OFF"; C.startUp(); C.debugOnly(); return false; }
+        }
         public bool ANDLogic(intrerupator A, intrerupator B, intrerupator C)
         {
             if (A.value == "ON" && B.value == "ON") { C.value = "ON"; C.startUp(); C.debugOnly(); return true; }

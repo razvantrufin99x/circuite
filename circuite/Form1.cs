@@ -19,6 +19,7 @@ namespace circuite
         circuitelectriccuintrerupatoare circuitulAND = new circuitelectriccuintrerupatoare();
         circuitelectriccuintrerupatoare circuitulOR = new circuitelectriccuintrerupatoare();
         circuitelectriccuintrerupatoare circuitulNOT = new circuitelectriccuintrerupatoare();
+        circuitelectriccuintrerupatoare circuitulANDM = new circuitelectriccuintrerupatoare();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,6 +34,11 @@ namespace circuite
             circuitulOR.listaIntrerupatoareIntrare.Add(this.intrerupator6);
             circuitulOR.listaIntrerupatoareIntrare.Add(this.intrerupator7);
             circuitulOR.listaIntrerupatoareIesire.Add(this.intrerupator8);
+
+            circuitulANDM.listaIntrerupatoareIntrare.Add(this.intrerupator10);
+            circuitulANDM.listaIntrerupatoareIntrare.Add(this.intrerupator12);
+            circuitulANDM.listaIntrerupatoareIntrare.Add(this.intrerupator11);
+            circuitulANDM.listaIntrerupatoareIesire.Add(this.intrerupator9);
 
         }
 
@@ -51,6 +57,12 @@ namespace circuite
         private void button3_Click(object sender, EventArgs e)
         {
             circuitulOR.ORLogic(circuitulOR.listaIntrerupatoareIntrare[0], circuitulOR.listaIntrerupatoareIntrare[1], circuitulOR.listaIntrerupatoareIesire[0]);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            circuitulAND.ANDMultipleLogic( ref circuitulANDM.listaIntrerupatoareIntrare, circuitulANDM.listaIntrerupatoareIesire[0]);
 
         }
     }
