@@ -64,7 +64,7 @@ namespace circuite
         public int ANDmx(ref List<int> im, ref int c)
         {
             if (im[0] == 1 && im[1] == 1 && im[2] == 1) { c = 1; return 1; }
-            else { c = 1; return 0; }
+            else { c = 0; return 0; }
         }
 
         public int MUX(int a, int b, int s, ref int z)
