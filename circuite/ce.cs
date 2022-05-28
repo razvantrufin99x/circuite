@@ -256,9 +256,94 @@ namespace circuite
             return c;
         }
 
-
+        public class terminal
+        { 
+            public string name;
+        }
+        public class wire
+        {
+            public string name;
+            public object a;
+            public object b;
+        }
         //bipolar junction transistors
-        //page150
+        public class TB
+        {
+            public terminal Emitor;
+            public terminal Colector;
+            public terminal Baza;
+        }
+        public class TBnpn :TB {
+            public jonction CBnp;
+            public jonction BEpn;
+
+            public void simulate()
+            {
+                float diodedrop = 0.6f;
+                float beta = 10.0f;
+                float vcesat = 0.2f;
+                float rcesat = 50.0f;
+                float vcc=0, vin=0, r1=0, r2=0;
+                float ib=0, ic=0, vce=0;
+                if (vin < diodedrop)
+                {
+                    ib = 0.0f;
+                    ic = 0.0f;
+                    vce = vcc;
+                }
+                else
+                {
+                    ib = (vin - diodedrop) / r1;
+                    if ((vcc - ((beta * ib) * r2)) >= vcesat)
+                    {
+                        ic = beta * ib;
+                        vce = vcc - (ic * r2);
+                    }
+                    else 
+                    {
+                        vce = vcesat;
+                        ic = (vcc - vce) / (r2 * rcesat);
+                    }
+                }
+            }
+         
+        }
+        public class TBpnp :TB 
+        {
+            public jonction CBpn;
+            public jonction BEnp;
+        }
+
+        //transitor inverter    
+        //echivalent NOT gate
+        public void TransistorInverter()
+        {
+            //NOTgate
+        }
+
+        public class SchottkyDiode { }
+
+        public class SchottkyTranzistor:TB
+        { 
+            public SchottkyDiode SkD;
+        }
+
+        //v. NOT gate
+        public void InverterSchottkyTransistor() { }
+
+        //transistor transistor logic
+        //tll nand gate
+        //dioade and gate and input protection
+        //phase splitter
+        //output stage
+        public int twoinputsLSTTLNANDgate(int X, int Y, ref int Z) 
+        {
+            if (X == 1 && Y == 1) { Z = 0;  return 0; }
+            else { Z = 1; return 1; }
+        }
+
+        //logic levels and noise margins 
+        //pag 159
 
         public class ODO : CMOS 
         { 
