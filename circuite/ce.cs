@@ -468,7 +468,213 @@ namespace circuite
 
 
         //combinational logic design principles
-        //pag 191
+        //algebra switching
+        //boolean algebra
+        //axiome
+        //~ not or complement
+        public int BooleanNOT(int a)
+        {
+            if (a == 1) { return 0; }
+            else { return 1; }
+        }
+        //* multiplication
+        public int BooleanMULT(int a, int b)
+        {
+            if (a == 0 && b == 0) { return 0; }
+            else if(a == 1 && b == 1) { return 1; }
+            else if(a == 0 && b == 1) { return 0; }
+            else if (a == 1 && b == 0) { return 0; }
+            return 0;
+        }
+        //+ adding
+        public int BooleanADD(int a, int b)
+        {
+            if (a == 0 && b == 0) { return 0; }
+            else if (a == 1 && b == 1) { return 1; }
+            else if (a == 0 && b == 1) { return 1; }
+            else if (a == 1 && b == 0) { return 1; }
+            return 0;
+        }
+        //identity + x+0=x
+        public int BooleanIdentityADD(int X, int a)
+        {
+            if (a == 0) { return X; }
+            return 1;
+        }
+        //identity * x*1=x
+        public int BooleanIdentityMULT(int X, int a)
+        {
+            if (a == 1) { return X; }
+            return 0;
+        }
+        //null element + x+1=1
+        public int BooleanNUllElementADD(int X, int a)
+        {
+            if (a == 1) { return 1; }
+            return X;
+        }
+        //null element * x*0=0
+        public int BooleanNullElementMULT(int X, int a)
+        {
+            if (a == 0) { return 0; }
+            return X;
+        }
+        //idempotency + x+x=x
+        public int BooleanIdempotencyADD(int X, int a)
+        {
+            if (X == a) { return X; }
+            else { return 1; }
+        }
+        //idempotency * x*x=x
+        public int BooleanIdempotencyMULT(int X, int a)
+        {
+            if (X == a) { return X; }
+            else { return 1; }
+        }
+        //involution + (x')' = x
+        public int BooleanInvolutionADD(int X)
+        {
+            return X;
+        }
+        //complement + x+x'=1
+        public int BooleanComplementADD(int X)
+        {
+           
+            return 1; 
+        }
+        //complement + x*x'=0
+        public int BooleanComplementMULT(int X)
+        {
+            return 0;
+        }
+
+
+        //single-variable theorems
+        //x = 0 for 0+0=0
+        //x = 1 for 1+0=1
+
+        //2 or 3 variables theorems
+        //commutativity
+        //x+y = y +x
+        //xy=yx
+
+        //associativity
+        //(x+y)+x = x+(y+z)
+        //(xy)x = x(yz)
+
+        //distributivity
+        //(xy+xz) = x(y+z)
+        //(x+y)(x+z) = x+y*z
+
+        //coverting
+        //x+x*y=x
+        //x*(x+y)=x
+
+        //combining
+        //xy + xy' = x
+        //(x+y)*(x+y')=x
+
+        //consensus
+        //x*y+x'*z+y*z = x*y+x'*z
+
+        //t11'
+        //(x+y)*(x'+z)*(y+z)= (x+y)*(x'+z)
+
+        //n-variabile variable theorems
+        //demorgan teorems
+        //generalized idempotency
+        //demorgan T
+        //generalized demorgan T
+        //shannon expansion T
+        //pag204
+
+        //equivalent gates according to demorgan T
+        //AND NOT
+        //(X*Y)'=Z
+        //NOT OR
+        //(X'+Y')=Z
+        //NAND
+        //(XY)' = Z
+        //NAND
+        //X'+Y'=Z
+
+        //OR NOT
+        //(X+Y)' = Z
+        //NOT AND
+        //X'Y' = Z
+        //NOR 
+        //(X+Y)'=Z
+        //NOR
+        //X'*Y'=Z
+
+        //DEMORGAN EQUIV. TO T13
+
+        //duality
+        //swap(0,1)==true
+        //swal('*','+')==true
+
+        //boolean functions
+        //function with gates
+        //logic function
+        //representations
+        //true table ganeral
+        // true table
+        //minterm
+        //maxterm
+        //canonical sum
+        //canonical product
+
+        //Combinational circuit analysis
+        //3 in to 1 out
+        //circuite pentru analiza algebrica multi level
+        //sinteza CC
+
+
+        //canonical sum design for 4 bit prime number detector
+        //alarm circuit deriver from logic expression
+        //sum of products version of alarm circuit
+        //alternatives sum of products realizations
+
+        //circuit manipulation
+        //sum of producst 2 levels alternative
+        //products of sum expressions alt.
+
+        //CB minimization
+        //sum of products realiz for 4 bit prime nr det simplified
+
+        //karnaugh maps
+        //min suma of products
+        //simp products of sums
+        //dont care input combinations
+        //multiple putput min
+        //programmed min methods
+        //repr of products terms
+        //find prime implicants by combin products termns
+        //find a min over using a prime implicant table
+        //other min meth
+
+        //timins hazards
+        //static hazard
+        //find st hazards using maps
+        //dinamic hazards
+        //designing hazard free circuit
+
+        //abel hardware design language
+        //abel program struct
+        //abel compiler op
+        //when state and equ blocks
+        //truth tables
+        //ranges, sets, relations
+        //dont care inputs
+        //test vectors
+
+
+        //vdhl
+        //ref
+       
+        //CL design practices
+        //pag278
+
 
 
         public class ODO : CMOS 
