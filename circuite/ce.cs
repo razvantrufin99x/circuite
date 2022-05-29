@@ -259,12 +259,17 @@ namespace circuite
         public class terminal
         {
             public string name;
+            public terminal() { }
+            public terminal(string name) { this.name = name; }  
+
         }
         public class wire
         {
             public string name;
             public object a;
             public object b;
+            public wire() { }
+            public wire(string name) { this.name = name; }
         }
         //bipolar junction transistors
         public class TB
@@ -671,11 +676,297 @@ namespace circuite
 
         //vdhl
         //ref
-       
+
         //CL design practices
-        //pag278
+        //docu std
+        //block diagram
+
+        public class bus
+        {
+            public pair pereche = new pair();
+        }
+        public class block {
+            public string name = "";
+            public block() {}
+            public block(string pname) { name = pname; }
+            public List<terminal> tin = new List<terminal> ();
+            public List<terminal> tout = new List<terminal>();
+            
+        }
+        public class diagram { }
+        public class blockdiagram : diagram {
+             public List<block> blocksList = new List<block> ();
+             public List<bus> busList = new List<bus> ();
+
+        }
+
+        public blockdiagram SHIFTANDADDMULTIPLIER = new blockdiagram();
+
+        public void addBlocks()
+        {
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("CONTROL"));
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("AREGISTER"));
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("BREGISTER"));
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("CARRYLOOKAHEADADDER"));
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("A16WORDX32BITRAM"));
+            SHIFTANDADDMULTIPLIER.blocksList.Add(new block("MULTIPLEXER4TO1"));
+        }
+        public void addTerminals2Blocks()
+        {
 
 
+            SHIFTANDADDMULTIPLIER.blocksList[0].tin.Add(new terminal("RESET"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tin.Add(new terminal("LOAD"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tin.Add(new terminal("RUN"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tin.Add(new terminal("DISPLAY"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("LDA"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("LDB"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("BUS SEL"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("RW"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("BUS ADDR"));
+            SHIFTANDADDMULTIPLIER.blocksList[0].tout.Add(new terminal("BYTE EN"));
+
+            SHIFTANDADDMULTIPLIER.blocksList[1].tout.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[1].tin.Add(new terminal("LDA"));
+            SHIFTANDADDMULTIPLIER.blocksList[1].tin.Add(new terminal("BUS 32"));
+
+            SHIFTANDADDMULTIPLIER.blocksList[2].tout.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[2].tin.Add(new terminal("LDB"));
+            SHIFTANDADDMULTIPLIER.blocksList[2].tin.Add(new terminal("BUS 32"));
+
+            SHIFTANDADDMULTIPLIER.blocksList[4].tout.Add(new terminal("BUS OUT 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[4].tin.Add(new terminal("RW"));
+            SHIFTANDADDMULTIPLIER.blocksList[4].tin.Add(new terminal("BYTE EN"));
+            SHIFTANDADDMULTIPLIER.blocksList[4].tin.Add(new terminal("ADDR"));
+            SHIFTANDADDMULTIPLIER.blocksList[4].tin.Add(new terminal("IN"));
+            SHIFTANDADDMULTIPLIER.blocksList[4].tin.Add(new terminal("OUTBUS"));
+
+
+            SHIFTANDADDMULTIPLIER.blocksList[3].tout.Add(new terminal("OUTBUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[3].tin.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[3].tin.Add(new terminal("BUS 32"));
+
+            SHIFTANDADDMULTIPLIER.blocksList[5].tout.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[5].tin.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[5].tin.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[5].tin.Add(new terminal("BUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[5].tin.Add(new terminal("INBUS 32"));
+            SHIFTANDADDMULTIPLIER.blocksList[5].tin.Add(new terminal("BUS SEL 2"));
+
+
+
+
+
+
+
+        }
+        public void addBuses()
+        {
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 1);
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 2);
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 4);
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 4);
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 4);
+            SHIFTANDADDMULTIPLIER.busList[0].pereche = new pair(0, 5);
+
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[1].pereche = new pair(1, 3);
+
+
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[2].pereche = new pair(2, 3);
+
+
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[3].pereche = new pair(3, 4);
+
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[4].pereche = new pair(4, 5);
+            SHIFTANDADDMULTIPLIER.busList[4].pereche = new pair(4, 5);
+            SHIFTANDADDMULTIPLIER.busList[4].pereche = new pair(4, 5);
+
+            SHIFTANDADDMULTIPLIER.busList.Add(new bus());
+            SHIFTANDADDMULTIPLIER.busList[5].pereche = new pair(4, 1);
+            SHIFTANDADDMULTIPLIER.busList[5].pereche = new pair(4, 2);
+
+        }
+
+        public void drawBlock() { }
+        public void drawBUS() { }
+        public void drawTerminal() { }
+        public void drawDiagram() { }
+        public void drawBlockDiagram() { }
+
+        //gate symbols
+        //equiv symbols for gates conform demorgan
+        //signal names and active levels
+        //active levels for pins
+        //bubble to bubble logic design
+        //drawing layout
+        //flat schematics structure
+        //hierarchical schematics structure
+
+        //buses
+
+        //74hct00
+
+        //additional schematic information
+        //circuit timing
+        //timing diagrams
+        //data signals
+        //propagation delay
+        //timing specifications
+        //timing analysis tools
+
+
+        //combnationals PLDs
+        //pla
+        //a 4x3 pla with 6 product terms
+        //compact repr of pla
+        //pla programmed witha set of 3logic equ
+        //pla devices
+        //pal16l8
+        //simbol for ...
+
+        //generic array logic devices
+        //pla with ttl open colector gates and diode logic
+
+        //bipolar pld circuits
+        //pla with cmos logic    
+        //cmos pld circuits
+        //epld with floating gate mos t. AND plane
+        //device programming and testing
+
+
+        //decoders
+        //binary decoders
+        //a2to4binarydecoder
+
+        public class quadInt
+        {
+            public int a;
+            public int b;
+            public int c;
+            public int d;
+            public quadInt() { }
+            public quadInt(int pa, int pb, int pc, int pd)
+            {
+                a = pa;
+                b = pb;
+                c = pc;
+                d = pd;
+            }
+        }
+        public quadInt a2to4binarydecoder(int EN, int I1, int I0) {
+            if (EN == 0 && I1 == 2 && I0 == 2) { return new quadInt(0,0,0,0);}
+            else if (EN == 1 && I1 == 0 && I0 == 0) { return new quadInt(0, 0, 0, 0); }
+            else if (EN == 1 && I1 == 0 && I0 == 1) { return new quadInt(0, 0, 0, 1); }
+            else if (EN == 1 && I1 == 1 && I0 == 0) { return new quadInt(0, 0, 1, 0); }
+            else if (EN == 1 && I1 == 1 && I0 == 1) { return new quadInt(1, 0, 0, 0); }
+            else return new quadInt(2, 2, 2, 2); //2 = illegal x
+        }
+
+        //binary decoders
+        //disk pos of a mecanical encoding disk with 3 bits
+        //disk pos grade        : 0  45 90 135 180 225 270 315
+        //binary decoder output : y0 y1 y3  y2 y6  y7  y5  y4
+
+        public string mecanicalEncoderDisk(int I2, int I1, int I0)
+        {
+            if (I2 == 0  && I1 == 0 && I0 == 0) { return "Y0"; }
+            else if (I2 == 0 && I1 == 0 && I0 == 1) { return "Y1"; }
+            else if (I2 == 0 && I1 == 1 && I0 == 1) { return "Y3"; }
+            else if (I2 == 0 && I1 == 1 && I0 == 0) { return "Y2"; }
+            else if (I2 == 1 && I1 == 1 && I0 == 0) { return "Y6"; }
+            else if (I2 == 1 && I1 == 1 && I0 == 1) { return "Y7"; }
+            else if (I2 == 1 && I1 == 0 && I0 == 1) { return "Y5"; }
+            else if (I2 == 1 && I1 == 0 && I0 == 0) { return "Y4"; }
+            else return "2"; //2 = illegal x
+        }
+
+        //logic symbols for LS elements
+        //a 3 to 8 binary decoder for gray code
+        //half 74x139
+        //74x139 dual 2to4 decoder
+        public quadInt a74x139dual2to4decoder(int GL, int B, int A)
+        {
+            if (GL == 1 && B == 2 && A == 2) { return new quadInt(1,1,1,1); }
+            else if (GL == 0 && B == 0 && A == 0) { return new quadInt(1, 1, 1, 0); }
+            else if (GL == 0 && B == 0 && A == 1) { return new quadInt(1, 1, 0, 1); }
+            else if (GL == 0 && B == 1 && A == 0) { return new quadInt(1, 0, 1, 1); }
+            else if (GL == 0 && B == 1 && A == 1) { return new quadInt(0, 1, 1, 1); }
+            else return new quadInt(2, 2, 2, 2); //2 = illegal x
+        }
+
+        //a 74x138 3 to 8 decoder
+
+        public class octInt
+        {
+            public int a;
+            public int b;
+            public int c;
+            public int d;
+            public int e;
+            public int f;
+            public int g;
+            public int h;
+
+            public octInt() { }
+            public octInt(int pa, int pb, int pc, int pd, int pe, int pf, int pg, int ph)
+            {
+                a = pa;
+                b = pb;
+                c = pc;
+                d = pd;
+                e = pe;
+                f = pf;
+                g = pg;
+                h = ph;
+            }
+        }
+
+        public octInt a74x1393to8decoder(int G1, int G2AL, int G2BL, int C, int B, int A )
+        {
+            if (G1 == 0 && G2AL == 2 && G2BL == 2 && C == 2 && B == 2 && A == 2) 
+            { return new octInt(1, 1, 1, 1,1,1,1,1); }
+
+            else if (G1 == 2 && G2AL == 1 && G2BL == 2 && C == 2 && B == 2 && A == 2)
+            { return new octInt(1, 1, 1, 1, 1, 1, 1, 1); }
+
+            else if (G1 == 2 && G2AL == 2 && G2BL == 1 && C == 2 && B == 2 && A == 2)
+            { return new octInt(1, 1, 1, 1, 1, 1, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 0 && B == 0 && A == 0)
+            { return new octInt(1, 1, 1, 1, 1, 1, 1, 0); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 0 && B == 0 && A == 1)
+            { return new octInt(1, 1, 1, 1, 1, 1, 0, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 0 && B == 1 && A == 0)
+            { return new octInt(1, 1, 1, 1, 1, 0, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 0 && B == 1 && A == 1)
+            { return new octInt(1, 1, 1, 1, 0, 1, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 1 && B == 0 && A == 0)
+            { return new octInt(1, 1, 1, 0, 1, 1, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 1 && B == 0 && A == 1)
+            { return new octInt(1, 1, 0, 1, 1, 1, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 1 && B == 1 && A == 0)
+            { return new octInt(1, 0, 1, 1, 1, 1, 1, 1); }
+
+            else if (G1 == 1 && G2AL == 0 && G2BL == 0 && C == 1 && B == 1 && A == 1)
+            { return new octInt(0, 1, 1, 1, 1, 1, 1, 1); }
+
+            else return new octInt(2, 2, 2, 2,2,2,2,2); //2 = illegal x
+        }
+
+
+        //pagina 325
+        //cascading binary decoders
 
         public class ODO : CMOS 
         { 
