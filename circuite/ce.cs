@@ -27,7 +27,7 @@ namespace circuite
 
         public int NOT(int a, ref int c)
         {
-            if (a == 1 ) { c = 1; return 1; }
+            if (a == 1) { c = 1; return 1; }
             else { c = 0; return 0; }
         }
 
@@ -46,7 +46,7 @@ namespace circuite
 
         public int XOR(int a, int b, ref int c)
         {
-            if (a!=b && (a == 1 || b == 1)) { c = 1; return 1; }
+            if (a != b && (a == 1 || b == 1)) { c = 1; return 1; }
             else { c = 0; return 0; }
         }
 
@@ -58,13 +58,13 @@ namespace circuite
         //unused input is tied to other input or ON all the time
         public int NAND(int a, int b, ref int c)
         {
-            if  (a == 1 && b == 1) { c = 0; return 0; }
+            if (a == 1 && b == 1) { c = 0; return 0; }
             else { c = 1; return 1; }
         }
 
         public int TripleNAND(int a, int b, int c, ref int r)
         {
-            if (a == 1 && b == 1 && c== 1) { r = 0; return 0; }
+            if (a == 1 && b == 1 && c == 1) { r = 0; return 0; }
             else { r = 1; return 1; }
         }
 
@@ -74,19 +74,19 @@ namespace circuite
             else { r = 1; return 1; }
         }
 
-        public int QuadNANDLists( ref List<int > l, ref int r)
+        public int QuadNANDLists(ref List<int> l, ref int r)
         {
             if (l[0] == 1 && l[1] == 1 && l[2] == 1 && l[3] == 1) { r = 0; return 0; }
             else { r = 1; return 1; }
         }
 
-        public int OctNAND(int a, int b,int c, int d, int e, int f, int g, int h, ref int r)
+        public int OctNAND(int a, int b, int c, int d, int e, int f, int g, int h, ref int r)
         {
-            if (a == 1 && b == 1 && c == 1 && d==1 && e == 1 && f == 1 && g == 1 && h == 1) { r = 0; return 0; }
+            if (a == 1 && b == 1 && c == 1 && d == 1 && e == 1 && f == 1 && g == 1 && h == 1) { r = 0; return 0; }
             else { r = 1; return 1; }
         }
 
-        public int OctNAND2QuadNAND(ref List <int > q1, ref List<int> q2, ref int r)
+        public int OctNAND2QuadNAND(ref List<int> q1, ref List<int> q2, ref int r)
         {
             int rq1 = 0;
             this.QuadNANDLists(ref q1, ref rq1);
@@ -133,7 +133,7 @@ namespace circuite
         }
 
         //multiplexor with transmission gates
-        public int MUXT(ref int z )
+        public int MUXT(ref int z)
         {
 
 
@@ -154,7 +154,7 @@ namespace circuite
         //drive a LED device with ODONAND or ordinary CMOS gate 
         public int ODONAND(int a, int b, ref int z)
         {
-            if  (a == 1 && b == 1) { z = 0; return 0; }
+            if (a == 1 && b == 1) { z = 0; return 0; }
             else { z = 1; return 1; }
         }
 
@@ -166,14 +166,14 @@ namespace circuite
 
 
         public class CMOS
-        { 
+        {
             public int A;
             public int B;
             public int Z;
             public float VCCmax;
             public float GND;
             public float VCCmin;
-            
+
 
         }
 
@@ -195,7 +195,7 @@ namespace circuite
             public float VILmax = 1.5f;
             public float VHmin = 3.5f;
             public float VOHminT = 3.84f;
-            public range ABNORMAL = new range(1.5f,3.5f);    
+            public range ABNORMAL = new range(1.5f, 3.5f);
         }
         //high speed CMOS,TTL
         public class HCT : CMOS
@@ -211,7 +211,7 @@ namespace circuite
         //very V
         public class VHC : CMOS { }
         public class VHCT : CMOS { }
-        
+
         //fast F
         public class FCT : CMOS { }
         public class FCTT : CMOS { }
@@ -231,12 +231,12 @@ namespace circuite
         public class pndevice {
             public jonction jpn;
         }
-        public class diode :pndevice {
-            
+        public class diode : pndevice {
+
         }
         public class circuitelectric
-        { 
-            
+        {
+
         }
 
         public class diodeintrerupator { }
@@ -246,18 +246,18 @@ namespace circuite
         //diodeANDgate
         //diode
         //diode2ANDgates
-        public int diode2ANDgates(ref List<int> xy,int B, ref int c)
+        public int diode2ANDgates(ref List<int> xy, int B, ref int c)
         {
             int z = 0;
-            
+
             this.AND(xy[0], xy[1], ref z);
             this.AND(z, B, ref c);
-          
+
             return c;
         }
 
         public class terminal
-        { 
+        {
             public string name;
         }
         public class wire
@@ -273,18 +273,18 @@ namespace circuite
             public terminal Colector;
             public terminal Baza;
         }
-        public class TBnpn :TB {
+        public class TBnpn : TB {
             public jonction CBnp;
             public jonction BEpn;
 
-            public void simulate()
+            public void simulate(float vcc, float vin, float r1, float r2)
             {
                 float diodedrop = 0.6f;
                 float beta = 10.0f;
                 float vcesat = 0.2f;
                 float rcesat = 50.0f;
-                float vcc=0, vin=0, r1=0, r2=0;
-                float ib=0, ic=0, vce=0;
+                //float vcc=0, vin=0, r1=0, r2=0;
+                float ib = 0, ic = 0, vce = 0;
                 if (vin < diodedrop)
                 {
                     ib = 0.0f;
@@ -299,16 +299,16 @@ namespace circuite
                         ic = beta * ib;
                         vce = vcc - (ic * r2);
                     }
-                    else 
+                    else
                     {
                         vce = vcesat;
                         ic = (vcc - vce) / (r2 * rcesat);
                     }
                 }
             }
-         
+
         }
-        public class TBpnp :TB 
+        public class TBpnp : TB
         {
             public jonction CBpn;
             public jonction BEnp;
@@ -323,8 +323,8 @@ namespace circuite
 
         public class SchottkyDiode { }
 
-        public class SchottkyTranzistor:TB
-        { 
+        public class SchottkyTranzistor : TB
+        {
             public SchottkyDiode SkD;
         }
 
@@ -336,6 +336,68 @@ namespace circuite
         //dioade and gate and input protection
         //phase splitter
         //output stage
+
+        public class gate {
+            public float VCC;
+            public float VOHmin;
+            public float IHmin;
+            public float VILmax;
+            public float VOLmax;
+            public float VCC0;
+            public float VCCn;
+            public gate() { }
+            public gate(float PVCC, float PVOHmin, float PIHmin, float PVILmax, float PVOLmax, float PVCC0, float PVCCn)
+            {
+                VCC = PVCC;
+                VOHmin = PVOHmin;
+                IHmin = PIHmin;
+                VILmax = PVILmax;
+                VOLmax = PVOLmax;
+                VCC0 = PVCC0;
+                VCCn = PVCCn;
+            }
+        }
+
+        public class LSTTLgate
+        {
+            public float VCC=5;
+            public float VOHmin=2.7f;
+            public float IHmin=2.0f;
+            public float VILmax=0.8f;
+            public float VOLmax=0.5f;
+            public float VCC0=0.0f;
+            public float VCCn=0.0f;
+            public float maximpropagdelay;
+            public float powercomsumpergate;
+            public float speedpowerproduct;
+            public float Ii;
+            public float IOS;
+            public float ICCH;
+            public float ICCL;
+            public float VIK;
+            public float VOH;
+            public float VOL;
+            public float IIH;
+            public float IIL;
+            public float IIOS;
+            public float IPLH;
+            public float IPHL;
+
+
+            public LSTTLgate() { }
+            public LSTTLgate(float PVCC, float PVOHmin, float PIHmin, float PVILmax, float PVOLmax, float PVCC0, float PVCCn)
+            {
+                VCC = PVCC;
+                VOHmin = PVOHmin;
+                IHmin = PIHmin;
+                VILmax = PVILmax;
+                VOLmax = PVOLmax;
+                VCC0 = PVCC0;
+                VCCn = PVCCn;
+            }
+        }
+
+        //2in LS TTL gate NAND
         public int twoinputsLSTTLNANDgate(int X, int Y, ref int Z) 
         {
             if (X == 1 && Y == 1) { Z = 0;  return 0; }
@@ -343,7 +405,71 @@ namespace circuite
         }
 
         //logic levels and noise margins 
-        //pag 159
+        //ttl output driving a ttl output to ON or OFF
+        //fanout LSTTL
+        //unused inputs LSTTL
+        //pull up and down Rs
+
+        //2in LS TTL gate NOR
+        public void twoimputsLSTTLNORgate() { }
+
+        //TTL families
+        //early 7400
+        //schottky TTL 74S
+        //74 family S, LS, AS, ALS, F
+        //TTL characteristics
+        //TTL data sheet
+
+        //CMOS/TTL Interfacing
+        //low voltage CMOS logic and interfacing
+        //V LVTTL and LVCMOS logic
+        //5V Tolerant Inputs Device CMOS
+        //5V non Tolerant Inputs Device CMOS
+        //TLL/LVTTL Interfacing
+        //2.5V and 1.8V Logic
+        //Emiter Coupled Logic ECL
+        //CML Circuit
+        //CML inverted buffer H in
+        //CML inverted buffer L in
+        public class pair
+        {
+            public int a;
+            public int b;
+            public pair() { }
+            public pair(int pa, int pb) { a = pa; b= pb; }
+        }
+
+        //OUT1 is NOR
+        //OUT2 is OR
+        public pair CML2inputsORNORgate(int x, int y, ref int Out1, ref int Out2)
+        { 
+                if(x == 0 && y == 0) { Out1 = 1; Out2 = 0; return new pair(1,0);
+                }
+                else { Out1 = 0; Out2 = 1; return new pair(0,1); }
+
+        }
+
+
+        //ECL 10K/10H fam.
+        //OUT1 is NOR
+        //OUT2 is OR
+        public pair ECL10k2inputsORNORgate(int x, int y, ref int Out1, ref int Out2)
+        {
+            if (x == 0 && y == 0)
+            {
+                Out1 = 1; Out2 = 0; return new pair(1, 0);
+            }
+            else { Out1 = 0; Out2 = 1; return new pair(0, 1); }
+
+        }
+
+        //ECL 100k fam.
+        //PECL
+
+
+        //combinational logic design principles
+        //pag 191
+
 
         public class ODO : CMOS 
         { 
