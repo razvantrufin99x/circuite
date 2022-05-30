@@ -926,7 +926,7 @@ namespace circuite
             }
         }
 
-        public octInt a74x1393to8decoder(int G1, int G2AL, int G2BL, int C, int B, int A )
+        public octInt a74x1383to8decoder(int G1, int G2AL, int G2BL, int C, int B, int A )
         {
             if (G1 == 0 && G2AL == 2 && G2BL == 2 && C == 2 && B == 2 && A == 2) 
             { return new octInt(1, 1, 1, 1,1,1,1,1); }
@@ -965,9 +965,133 @@ namespace circuite
         }
 
 
-        //pagina 325
-        //cascading binary decoders
 
+        //cascading binary decoders
+        //decoder in abel and plds
+        //74x128 3to8decoder 
+        //logic diagram inc pin numbers for a std 16 pins dual in line package
+        //traditional logic symbol
+        //4 to 16 decoder using 2x 74x138s
+
+        //int no n1 n2 n3 enl
+        //int A abc si B abc 
+        //int A g1 g2a g2b  B g1 g2a g2b
+        //out A dec0L to dec7L si B dec0L to dec7L
+        //gnd gn2
+        //5v g1
+
+        //5 to 32 decoder using 74x138s and 74x139
+        //...
+
+        //abel prorgam for a 74x138 like 3 to 8 decoder
+
+        //pal16l8 as 74x138 decoder
+        //prgram abel
+        //truth table for custon decoder
+        //circuit 
+        //abel soft
+
+
+        //decoder in vhdl
+        //out of order execution
+        //data flow definition
+        //vhdl entity v74x138
+        //behav style arhi def for a 3 to 8 decoder
+
+
+        //7 seg decoder
+        public class segment 
+        {
+            int cod;
+        }
+
+        public class digit7segemtns
+        {
+            public segment a;
+            public segment b;
+            public segment c;
+            public segment d;
+            public segment e;
+            public segment f;
+            public segment g;
+
+        }
+        //74x49
+        //abel code
+        // 2 == illegal
+        public octInt a74x49(int BIL, ref quadInt dcba)
+        {
+            if (BIL == 1)
+            {
+                if (dcba.d == 0 && dcba.c == 0 && dcba.b == 0 && dcba.a == 0)
+                { return new octInt(1, 1, 1, 1, 1, 1, 0, 0); }
+                if (dcba.d == 0 && dcba.c == 0 && dcba.b == 0 && dcba.a == 1)
+                { return new octInt(0,1,1,0,0,0,0`,0); }
+                if (dcba.d == 0 && dcba.c == 0 && dcba.b == 1 && dcba.a == 0)
+                { return new octInt(1,1,0,1,1,0,1,0); }
+                if (dcba.d == 0 && dcba.c == 0 && dcba.b == 1 && dcba.a == 1)
+                { return new octInt(1,1,1,1,0,0,1,0); }
+                if (dcba.d == 0 && dcba.c == 1 && dcba.b == 0 && dcba.a == 0)
+                { return new octInt(0,1,1,0,0,1,1,0); }
+                if (dcba.d == 0 && dcba.c == 1 && dcba.b == 0 && dcba.a == 1)
+                { return new octInt(1,0,1,1,0,1,1,0); }
+                if (dcba.d == 0 && dcba.c == 1 && dcba.b == 1 && dcba.a == 0)
+                { return new octInt(0,0,1,1,1,1,1,0); }
+                if (dcba.d == 0 && dcba.c == 1 && dcba.b == 1 && dcba.a == 1)
+                { return new octInt(1,1,1,0,0,0,0,0); }
+                if (dcba.d == 1 && dcba.c == 0 && dcba.b == 0 && dcba.a == 0)
+                { return new octInt(1,1,1,1,1,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 0 && dcba.b == 0 && dcba.a == 1)
+                { return new octInt(1,1,1,0,0,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 0 && dcba.b == 1 && dcba.a == 0)
+                { return new octInt(0,0,0,1,1,0,1,0); }
+                if (dcba.d == 1 && dcba.c == 0 && dcba.b == 1 && dcba.a == 1)
+                { return new octInt(0,1,0,0,0,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 1 && dcba.b == 0 && dcba.a == 0)
+                { return new octInt(1,0,0,1,0,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 1 && dcba.b == 0 && dcba.a == 1)
+                { return new octInt(0,0,0,1,1,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 1 && dcba.b == 1 && dcba.a == 0)
+                { return new octInt(0,0,0,1,1,1,1,0); }
+                if (dcba.d == 1 && dcba.c == 1 && dcba.b == 1 && dcba.a == 1)
+                { return new octInt(0 , 0 ,0 ,0 ,0 ,0 ,0, 0); }
+
+            }
+            else if (BIL == 0)
+            {
+                if (dcba.d == 2 && dcba.c == 2 && dcba.b == 2 && dcba.a == 2)
+                { return new octInt(0, 0, 0, 0, 0, 0, 0, 0); }
+            }
+           
+                return new octInt(2,2,2,2,2,2,2,2);
+            
+        }
+
+        //encoders
+        //8 to 3 encoder
+        //priority encoder
+        //2^n requests and a req encoder indicate signal asserted 
+        //74x148 8 input priority ecnodere
+        //EI i0 i1 i2 i3 i4 i5 i6 i7 A2 A1 A0 GS EO
+        //table truth
+        //logic diagram
+
+        //4x 74x148 cascaded to handle 32 requests circuit
+        //encoder in abel and plds
+        //15 input priotity request pld logic diagram
+        //I p0 to p13 
+        //O p14 ENL ENOUTL Y0L to Y3L GS
+        //abel program
+        //alternative abel proregam
+
+        //encoder in vhdl
+
+        //tree state devices
+        //tree state buffer
+        //pag350
+
+
+        // insufficient datas
         public class ODO : CMOS 
         { 
             
