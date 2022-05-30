@@ -9,7 +9,12 @@ namespace circuite
 
     public class ce
     {
-
+        /*
+         
+        FOR INFORMATIONS PURPOSE ONLY NOT A REAL CLASS
+        THA CLASSES WILL BE CREATED AFTER I COLECT INFORMATIONS NECESSARY
+         
+         */
         public List<int> i = new List<int>();
         public List<int> o = new List<int>();
 
@@ -1088,7 +1093,130 @@ namespace circuite
 
         //tree state devices
         //tree state buffer
-        //pag350
+
+        //threestrateNoninvertingActiveHighEnable
+        //threetateNoninvertingActiveLowEnagle
+        //threestateinvertingActiveHighEnable
+        //threetateInvertingActiveLowEnable
+
+        //74x138
+        //8 sources sharing a three state party line
+        //time diagram
+
+        //std ssi si msi threestate buffer
+        //74x125
+        //74x126
+        //74x541 octal three state buffer
+        //microprocessor input 74x541
+        //74x245
+        //octal three state transceiver
+
+        //bidirectional buses and transceiver op
+        //74x 540, 240, 241, 245
+
+        //three state outputs in abel and plds
+        //xcvr4x2
+        //three state outputs in vhdl
+
+
+
+        //multiplexer
+        //function
+        //iY = suma(j,0,n-1,EN * Mj * iDj);
+        //MUX STRUCTURE
+        //EQUIV FUNCTION
+
+        //std msi mupliplexer
+        //STD MSI MUX
+        //74X151 8 INPUT , 1 BIT MUX 
+        public List<string> Y = new List<string>();
+        public List<string> YL = new List<string>();
+
+        public void addValuesIntoLists()
+        {
+            Y.Add("0");
+            YL.Add("1");
+
+            Y.Add("D0");
+            YL.Add("D0N");
+
+            Y.Add("D1");
+            YL.Add("D1N");
+
+            Y.Add("D2");
+            YL.Add("D2N");
+
+            Y.Add("D3");
+            YL.Add("D3N");
+
+            Y.Add("D4");
+            YL.Add("D4N");
+
+            Y.Add("D5");
+            YL.Add("D5N");
+
+            Y.Add("D6");
+            YL.Add("D6N");
+
+            Y.Add("D7");
+            YL.Add("D7N");
+
+        }
+        //will return a pair of 2 indexes in Y and YL
+        
+        public pair a74x1512in4bitmupliplexor(int enl, int c, int b, int a)
+        {
+            if (enl == 1 && c == 2 && b == 2 && a == 2) { return new pair(0, 0); }
+            else if (enl == 0 && c == 0 && b == 0 && a == 0) { return new pair(0, 0); }
+            else if (enl == 0 && c == 0 && b == 0 && a == 1) { return new pair(0, 0); }
+            else if (enl == 0 && c == 0 && b == 1 && a == 0) { return new pair(0, 0); }
+            else if (enl == 0 && c == 0 && b == 1 && a == 1) { return new pair(0, 0); }
+            else if (enl == 0 && c == 1 && b == 0 && a == 0) { return new pair(0, 0); }
+            else if (enl == 0 && c == 1 && b == 0 && a == 1) { return new pair(0, 0); }
+            else if (enl == 0 && c == 1 && b == 1 && a == 0) { return new pair(0, 0); }
+            else if (enl == 0 && c == 1 && b == 1 && a == 1) { return new pair(0, 0); }
+            else return new pair(8, 8);
+            //8 illegal not existed index
+        }
+
+        //74X157 2 IN, 4 BIT MUX 
+        public List<string> Y1to4 = new List<string>();
+        public void addToListY1to4()
+        {
+            Y1to4.Add("0");
+            Y1to4.Add("1A");
+            Y1to4.Add("2A");
+            Y1to4.Add("3A");
+            Y1to4.Add("4A");
+            Y1to4.Add("1B");
+            Y1to4.Add("2B");
+            Y1to4.Add("3B");
+            Y1to4.Add("4B");
+
+        }
+
+        //WILL RETURN THE VALUES OF THE INDEX OF Y1to4 array in with index 10 is illegal
+        public quadInt a74x1572in4bitmupliplexor(int gl, int s)
+        {
+            if (gl == 1 && s == 2) { return new quadInt(0, 0, 0, 0); }
+            else if (gl == 0 && s == 0) { return new quadInt(1, 2, 3, 4); }
+            else if (gl == 0 && s == 1) { return new quadInt(5, 6, 7, 8); }
+            else return new quadInt(10,10,10,10);
+
+        }
+
+        //74x153 4 in 2 bit mux
+        //in 1gl 2gl b a
+        //out iy 2 y
+
+        //..not included in this
+
+
+        //expanding mupliplexers 
+        //pag 367
+
+
+
 
 
         // insufficient datas
