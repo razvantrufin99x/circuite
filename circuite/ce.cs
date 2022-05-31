@@ -1213,7 +1213,52 @@ namespace circuite
 
 
         //expanding mupliplexers 
-        //pag 367
+        // 4x 74x151s to make a 32 to 1 mux plus 1/2 74x139 si 1/2 74x20
+        //mux driving a bus and a demux reciving the bus
+        //switch equiv
+        //block diagram symbol
+
+        //mux, demux si bus
+        //2 to 4 decoder as 1 bit 4 out demux
+        //generic decoder
+        //74x139
+
+        //mux in abel si plds
+        //z74x153
+        //pal 16 l 8
+
+        //mux in vhdl
+
+        //xor gate 
+        //xnor gate
+        //and or gate
+        //tree level nand gate
+
+        //74x86
+
+        //xor gates
+        //daisy chain connection
+        //tree structure
+
+
+
+        //parity cicuits
+        //74x280 9bit parity generator
+        //parity checking apps
+        //16pin dual line package
+
+        //parity circuit generator and checking for 8 bit wide memory system
+
+        //error correction circuit for a 7 bit hamming code
+
+        //xor gates and parity circuits in abel
+        //plds
+        //vhdl
+
+        //comparators
+        //page 384
+
+
 
 
 
